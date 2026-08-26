@@ -1,3 +1,5 @@
+// Program that exemplifies the memory layout of a C++ program.
+
 #include <iostream>
 
 int c = 3;
