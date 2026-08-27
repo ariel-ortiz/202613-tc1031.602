@@ -1,4 +1,5 @@
 // Program that exemplifies the memory layout of a C++ program.
+// See class notes for more details.
 
 #include <iostream>
 
