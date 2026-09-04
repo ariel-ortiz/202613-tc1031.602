@@ -12,3 +12,7 @@
 
 # Unignore Makefiles
 !Makefile
+
+# Ignore VS Code folder
+.vscode/
+
