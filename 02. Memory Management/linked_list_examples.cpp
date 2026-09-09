@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+#include <climits>
 
 struct Node {
     int value;
@@ -60,21 +62,51 @@ void free(Node*& list)
     }
 }
 
+// Complexity: O(N)
+bool contains(Node* list, int x)
+{
+    while (list) {
+        if (list->value == x) {
+            return true;
+        }
+        list = list->next;
+    }
+    return false;
+}
+
+// Complexity: O(N)
+int largest(Node* list)
+{
+    int largest_so_far = INT_MIN;
+    while (list) {
+        if (list->value > largest_so_far) {
+            largest_so_far = list->value;
+        }
+        list = list->next;
+    }
+    return largest_so_far;
+}
+
 int main()
 {
+    std::cout << std::boolalpha;
     Node* start1 = nullptr;
-    add_front(start1, 5);
-    add_front(start1, 3);
-    add_front(start1, 1);
-    add_back(start1, 8);
+    add_front(start1, -5);
+    add_front(start1, -3);
+    add_front(start1, -1);
+    add_back(start1, -8);
     // display(start1);
-    add_front(start1, 7);
-    add_back(start1, 10);
+    add_front(start1, -7);
+    add_back(start1, -10);
     display(start1);
     std::cout << "size of start1 = " << size(start1) << "\n";
     Node* start2 = nullptr;
     display(start2);
     std::cout << "size of start2 = " << size(start2) << "\n";
+    std::cout << contains(start1, 3) << "\n";
+    std::cout << contains(start1, 6) << "\n";
+    std::cout << largest(start1) << "\n";
+    std::cout << largest(start2) << "\n";
     free(start1);
     free(start2);
     return 0;
