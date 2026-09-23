@@ -25,6 +25,12 @@ public:
         }
     }
 
+    // Copy constructor
+    LinkedList(const LinkedList& other) = delete;
+
+    // Asignment operator
+    LinkedList<T>& operator=(const LinkedList& other) = delete;
+
     // Complexity: O(N)
     ~LinkedList()
     {

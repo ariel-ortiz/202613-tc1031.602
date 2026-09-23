@@ -4,6 +4,8 @@
 int main()
 {
     LinkedList<int> a {1, 2, 3};
+    LinkedList<int> b;
+    b = a;
     a.insert_front(5);
     a.insert_front(7);
     a.insert_front(6);
