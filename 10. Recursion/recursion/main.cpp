@@ -13,6 +13,8 @@ int main()
     std::cout << first(IntList {6, 7, 8}) << "\n";
     std::cout << is_empty(a) << "\n";
     std::cout << is_empty(IntList {}) << "\n";
+    std::cout << size(rest(a)) << "\n";
+    std::cout << cons_end(108, a) << "\n";
 
     return 0;
 }

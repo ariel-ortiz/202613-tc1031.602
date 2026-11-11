@@ -5,26 +5,26 @@
 
 TEST_CASE("test the recursive functions")
 {
-    // SECTION("test size") {
-    //     REQUIRE(0 == size(IntList {}));
-    //     REQUIRE(1 == size(IntList {5}));
-    //     REQUIRE(4 == size(IntList {5, 6, 7, 8}));
-    //     REQUIRE(10 == size(IntList {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}));
-    // }
+    SECTION("test size") {
+        REQUIRE(0 == size(IntList {}));
+        REQUIRE(1 == size(IntList {5}));
+        REQUIRE(4 == size(IntList {5, 6, 7, 8}));
+        REQUIRE(10 == size(IntList {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}));
+    }
 
-    // SECTION("test cons_end") {
-    //     REQUIRE(IntList {5} == cons_end(5, IntList {}));
-    //     REQUIRE(IntList {7, 2, 10}
-    //         == cons_end(10, IntList {7, 2}));
-    //     REQUIRE(IntList {1, 2, 3, 4, 5}
-    //         == cons_end(5, IntList {1, 2, 3, 4}));
-    //     REQUIRE(IntList {22, 2, 20, 3, 9, 6, 14, 23, 24, 10, 5, 28,
-    //         11, 29, 13, 12, 17, 21, 1, 19, 16, 25, 0, 15, 4, 7, 27,
-    //         18, 26, 8, 99}
-    //         == cons_end(99, IntList {22, 2, 20, 3, 9, 6, 14, 23, 24,
-    //         10, 5, 28, 11, 29, 13, 12, 17, 21, 1, 19, 16, 25, 0, 15,
-    //         4, 7, 27, 18, 26, 8}));
-    // }
+    SECTION("test cons_end") {
+        REQUIRE(IntList {5} == cons_end(5, IntList {}));
+        REQUIRE(IntList {7, 2, 10}
+            == cons_end(10, IntList {7, 2}));
+        REQUIRE(IntList {1, 2, 3, 4, 5}
+            == cons_end(5, IntList {1, 2, 3, 4}));
+        REQUIRE(IntList {22, 2, 20, 3, 9, 6, 14, 23, 24, 10, 5, 28,
+            11, 29, 13, 12, 17, 21, 1, 19, 16, 25, 0, 15, 4, 7, 27,
+            18, 26, 8, 99}
+            == cons_end(99, IntList {22, 2, 20, 3, 9, 6, 14, 23, 24,
+            10, 5, 28, 11, 29, 13, 12, 17, 21, 1, 19, 16, 25, 0, 15,
+            4, 7, 27, 18, 26, 8}));
+    }
 
     // SECTION("test sum") {
     //     REQUIRE(0 == sum(IntList {}));
