@@ -73,6 +73,7 @@ IntList reverse(const IntList& a)
     return IntList {};
 }
 
+// Complexity: O(N + M), where N is the size A and M is the size of B
 IntList merge(const IntList& a, const IntList& b)
 {
     if (is_empty(a)) {
