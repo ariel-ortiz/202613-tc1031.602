@@ -194,36 +194,36 @@ TEST_CASE("test the TreeSet class")
         REQUIRE(3 == h.height());
     }
 
-    // SECTION("test is_full") {
-    //     REQUIRE(a.is_full());
-    //     REQUIRE(b.is_full());
-    //     REQUIRE(c.is_full());
-    //     REQUIRE_FALSE(d.is_full());
-    //     REQUIRE(e.is_full());
-    //     REQUIRE_FALSE(f.is_full());
-    //     REQUIRE_FALSE(g.is_full());
-    //     REQUIRE(h.is_full());
-    // }
+    SECTION("test is_full") {
+        REQUIRE(a.is_full());
+        REQUIRE(b.is_full());
+        REQUIRE(c.is_full());
+        REQUIRE_FALSE(d.is_full());
+        REQUIRE(e.is_full());
+        REQUIRE_FALSE(f.is_full());
+        REQUIRE_FALSE(g.is_full());
+        REQUIRE(h.is_full());
+    }
 
-    // SECTION("test leaf_count") {
-    //     REQUIRE(0 == a.leaf_count());
-    //     REQUIRE(1 == b.leaf_count());
-    //     REQUIRE(4 == c.leaf_count());
-    //     REQUIRE(2 == d.leaf_count());
-    //     REQUIRE(8 == e.leaf_count());
-    //     REQUIRE(1 == f.leaf_count());
-    //     REQUIRE(1 == g.leaf_count());
-    //     REQUIRE(8 == h.leaf_count());
-    // }
+    SECTION("test leaf_count") {
+        REQUIRE(0 == a.leaf_count());
+        REQUIRE(1 == b.leaf_count());
+        REQUIRE(4 == c.leaf_count());
+        REQUIRE(2 == d.leaf_count());
+        REQUIRE(8 == e.leaf_count());
+        REQUIRE(1 == f.leaf_count());
+        REQUIRE(1 == g.leaf_count());
+        REQUIRE(8 == h.leaf_count());
+    }
 
-    // SECTION("test is_perfect") {
-    //     REQUIRE(a.is_perfect());
-    //     REQUIRE(b.is_perfect());
-    //     REQUIRE(c.is_perfect());
-    //     REQUIRE_FALSE(d.is_perfect());
-    //     REQUIRE_FALSE(e.is_perfect());
-    //     REQUIRE_FALSE(f.is_perfect());
-    //     REQUIRE_FALSE(g.is_perfect());
-    //     REQUIRE(h.is_perfect());
-    // }
+    SECTION("test is_perfect") {
+        REQUIRE(a.is_perfect());
+        REQUIRE(b.is_perfect());
+        REQUIRE(c.is_perfect());
+        REQUIRE_FALSE(d.is_perfect());
+        REQUIRE_FALSE(e.is_perfect());
+        REQUIRE_FALSE(f.is_perfect());
+        REQUIRE_FALSE(g.is_perfect());
+        REQUIRE(h.is_perfect());
+    }
 }

@@ -119,6 +119,25 @@ public:
         return _height(_root);
     }
 
+    // Complexity: O(N)
+    bool is_full() const
+    {
+        return _is_full(_root);
+    }
+
+    // Complexity: O(N)
+    int leaf_count() const
+    {
+        return _leaf_count(_root);
+    }
+
+
+    // Complexity: O(N)
+    bool is_perfect() const
+    {
+        return size() == static_cast<int>(std::pow(2, height() + 1)) - 1;
+    }
+
 private:
 
     struct Node {
@@ -196,6 +215,36 @@ private:
         }
 
         return std::max(_height(p->left), _height(p->right)) + 1;
+    }
+
+    bool _is_full(Node* p) const
+    {
+        if (not p) {
+            return true;
+        }
+
+        if (not p->left and not p->right) {
+            return true;
+        }
+
+        if (p->left and p->right) {
+            return _is_full(p->left) and _is_full(p->right);
+        }
+
+        return false;
+    }
+
+    int _leaf_count(Node* p) const
+    {
+        if (not p) {
+            return 0;
+        }
+
+        if (not p->left and not p->right) {
+            return 1;
+        }
+
+        return _leaf_count(p->left) + _leaf_count(p->right);
     }
 
     Node* _root = nullptr;

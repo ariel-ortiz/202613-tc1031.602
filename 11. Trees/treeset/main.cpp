@@ -16,7 +16,7 @@ void suma(int x)
 
 int main()
 {
-    TreeSet<int> t {10, 5, 15, 2, 7, 11, 24};
+    TreeSet<int> t {10, 5, 15, 2, 7, 11, 24, 40};
     std::cout << t.contains(15) << "\n";
     std::cout << t.contains(1) << "\n";
     t.inorder(print_value);
@@ -30,6 +30,9 @@ int main()
     t.levelorder(print_value);
     std::cout << "\n";
     std::cout << t.height() << "\n";
+    std::cout << t.is_full() << "\n";
+    std::cout << t.leaf_count() << "\n";
+    std::cout << t.is_perfect() << "\n";
 
     return 0;
 }
